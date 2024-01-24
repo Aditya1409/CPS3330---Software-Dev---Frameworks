@@ -127,3 +127,4 @@ static string CheckSwitch(int[] values) => values switch
 };
 
 #endregion
+  
