@@ -1,0 +1,15 @@
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfoInputs.cache
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfo.cs
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.csproj.CoreCompileInputs.cache
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\bin\Debug\net8.0\Lab2.exe
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\bin\Debug\net8.0\Lab2.deps.json
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\bin\Debug\net8.0\Lab2.runtimeconfig.json
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\bin\Debug\net8.0\Lab2.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\bin\Debug\net8.0\Lab2.pdb
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\refint\Lab2.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.pdb
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\Lab2.genruntimeconfig.cache
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\Lab2\obj\Debug\net8.0\ref\Lab2.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TestMax/1.0.0": {
+        "dependencies": {
+          "MaxLibrary": "1.0.0"
+        },
+        "runtime": {
+          "TestMax.dll": {}
+        }
+      },
+      "MaxLibrary/1.0.0": {
+        "runtime": {
+          "MaxLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestMax/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaxLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\bin\Debug\net8.0\MaxLibrary.deps.json
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\bin\Debug\net8.0\MaxLibrary.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\bin\Debug\net8.0\MaxLibrary.pdb
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.AssemblyInfoInputs.cache
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.AssemblyInfo.cs
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.csproj.CoreCompileInputs.cache
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.sourcelink.json
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\refint\MaxLibrary.dll
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\MaxLibrary.pdb
+C:\Kean University\Spring 2024\CPS3330 - Software Dev + Frameworks\MaxLibrary\obj\Debug\net8.0\ref\MaxLibrary.dll
