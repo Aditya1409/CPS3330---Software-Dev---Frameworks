@@ -1,130 +1,60 @@
-﻿using static System.Console;
-
-
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Hello, Aditya");
-Console.WriteLine("Version: {0}", Environment.Version.ToString());
-
-string text = System.IO.File.ReadAllText("text.txt");
-Console.WriteLine(text);
-
-#region Working with single-dimensional arrays
-
-Console.WriteLine("Hi, Aditya");
-Console.WriteLine("Version: {0}", Environment.Version.ToString());
-
-string[] names; // This can reference any size array of strings.
-
-// Allocate memory for four strings in an array.
-names = new string[4];
-
-// Store items at these index positions.
-names[0] = "Adi";
-names[1] = "Iramir";
-names[2] = "Vince";
-names[3] = "Abi";
-
-// Alternative syntax for creating and initializing an array.
-string[] names2 = { "Adi", "Iramir", "Vince", "Abi" };
-
-// Loop through the names.
-for (int i = 0; i < names2.Length; i++)
+﻿using System;
+using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using static System.Console;
+//ykumar 2/11/2023 CPS*3330, CPS*4981 - ADD YOUR information here
+WriteLine("It runs!");
+// Create the connection to the resource!
+//using (SqlConnection conn = new SqlConnection())
+SqlConnection conn = new SqlConnection();
+// Create the connectionString - USE YOUR CREDENTIALS
+conn.ConnectionString = "Server = Aditya-XPS\\SQLEXPRESS; Database=Users; User Id=parekhad; Password=Kingadi14;";
+conn.Open();
+// Create the command
+SqlCommand command = new SqlCommand("SELECT * FROM AParekhTable",
+conn);
+int max = 0;
+//read from the database
+using (SqlDataReader reader = command.ExecuteReader())
 {
-  // Output the item at index position i.
-  WriteLine($"{names2[i]} is at position {i}.");
+    WriteLine("UserID\tUserName\tUserEmail");
+    while (reader.Read())
+    {
+        WriteLine(String.Format("{0} \t | {1} \t | {2}", reader[0],
+        reader[1], reader[2]));
+        max = Convert.ToInt32(reader[0].ToString());//yk
+    }
 }
-
-#endregion
-
-#region Working with multi-dimensional arrays
-
-string[,] grid1 = // Two dimensional array.
-{
-  { "Monkey", "Banana", "Apple", "Delta" },
-  { "Chipotle", "Benjamin", "Charlie", "Doug" },
-  { "Aardvark", "Bear", "Cat", "Dog" }
-};
-
-WriteLine($"1st dimension, lower bound: {grid1.GetLowerBound(0)}");
-WriteLine($"1st dimension, upper bound: {grid1.GetUpperBound(0)}");
-WriteLine($"2nd dimension, lower bound: {grid1.GetLowerBound(1)}");
-WriteLine($"2nd dimension, upper bound: {grid1.GetUpperBound(1)}");
-
-for (int row = 0; row <= grid1.GetUpperBound(0); row++)
-{
-  for (int col = 0; col <= grid1.GetUpperBound(1); col++)
-  {
-    WriteLine($"Row {row}, Column {col}: {grid1[row, col]}");
-  }
-}
-
-#endregion
-
-#region Working with jagged arrays
-
-string[][] jagged = // An array of string arrays.
-{
-  new[] { "Monkey", "Banana", "Apple" },
-  new[] { "Chipotle", "Benjamin", "Charlie", "Doug" },
-  new[] { "Aardvark", "Bear" }
-};
-
-WriteLine("Upper bound of the array of arrays is: {0}",
-  jagged.GetUpperBound(0));
-
-for (int array = 0; array <= jagged.GetUpperBound(0); array++)
-{
-  WriteLine("Upper bound of array {0} is: {1}",
-    arg0: array,
-    arg1: jagged[array].GetUpperBound(0));
-}
-
-for (int row = 0; row <= jagged.GetUpperBound(0); row++)
-{
-  for (int col = 0; col <= jagged[row].GetUpperBound(0); col++)
-  {
-    WriteLine($"Row {row}, Column {col}: {jagged[row][col]}");
-  }
-}
-
-#endregion
-
-#region List pattern matching with arrays
-
-int[] sequentialNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-int[] oneTwoNumbers = { 1, 2 };
-int[] oneTwoTenNumbers = { 1, 2, 10 };
-int[] oneTwoThreeTenNumbers = { 1, 2, 3, 10 };
-int[] primeNumbers = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
-int[] fibonacciNumbers = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
-int[] emptyNumbers = { }; // Or use Array.Empty<int>()
-int[] threeNumbers = { 9, 7, 5 };
-int[] sixNumbers = { 9, 7, 5, 4, 2, 10 };
-
-WriteLine($"{nameof(sequentialNumbers)}: {CheckSwitch(sequentialNumbers)}");
-WriteLine($"{nameof(oneTwoNumbers)}: {CheckSwitch(oneTwoNumbers)}");
-WriteLine($"{nameof(oneTwoTenNumbers)}: {CheckSwitch(oneTwoTenNumbers)}");
-WriteLine($"{nameof(oneTwoThreeTenNumbers)}: {CheckSwitch(oneTwoThreeTenNumbers)}");
-WriteLine($"{nameof(primeNumbers)}: {CheckSwitch(primeNumbers)}");
-WriteLine($"{nameof(fibonacciNumbers)}: {CheckSwitch(fibonacciNumbers)}");
-WriteLine($"{nameof(emptyNumbers)}: {CheckSwitch(emptyNumbers)}");
-WriteLine($"{nameof(threeNumbers)}: {CheckSwitch(threeNumbers)}");
-WriteLine($"{nameof(sixNumbers)}: {CheckSwitch(sixNumbers)}");
-
-static string CheckSwitch(int[] values) => values switch
-{
-  [] => "Empty array",
-  [1, 2, _, 10] => "Contains 1, 2, any single number, 10.",
-  [1, 2, .., 10] => "Contains 1, 2, any range including empty, 10.",
-  [1, 2] => "Contains 1 then 2.",
-  [int item1, int item2, int item3] =>
-    $"Contains {item1} then {item2} then {item3}.",
-  [0, _] => "Starts with 0, then one other number.",
-  [0, ..] => "Starts with 0, then any range of numbers.",
-  [2, .. int[] others] => $"Starts with 2, then {others.Length} more numbers.",
-  [..] => "Any items in any order.",
-};
-
-#endregion
-  
+WriteLine("Data displayed! Press enter to Proceed!");
+WriteLine("Max ID is " + max + ".");//yk
+WriteLine("Select is successful. Press Enter to Proceed");//yk
+ReadLine();
+Clear();
+//insert data into the database, the query uses parameters - secure way to insert
+WriteLine("INSERT INTO command");
+SqlCommand insertCommand = new SqlCommand("INSERT INTO AParekhTable (UserId, UserName, UserEmail) VALUES (@0, @1, @2)", conn);
+insertCommand.Parameters.Add(new SqlParameter("0", (max + 1)));//yk
+insertCommand.Parameters.Add(new SqlParameter("1", "New User"));
+insertCommand.Parameters.Add(new SqlParameter("2","newuser@kean.edu"));
+// Execute the command, and print the values of the columns affected through // the command executed.
+WriteLine("Commands executed! Total rows affected are " +
+insertCommand.ExecuteNonQuery());
+WriteLine("Insert is successful. Press Enter to Proceed");//yk
+ReadLine();
+Clear();
+// In this section there is an example of the Exception / caught error case
+WriteLine("Now the error trial! Press Enter to Complete.");
+    try
+    {
+        // Create the command to execute! With the wrong name of the table(Depends on your Database tables)
+    SqlCommand errorCommand = new SqlCommand("SELECT * FROM AParekhTable", conn);
+    errorCommand.ExecuteNonQuery();
+    }
+    catch (SqlException er)
+    {
+        WriteLine("There was an error reported by SQL Server, " +
+        er.Message);
+    }
+    // Final step, close the resources flush dispose them. ReadLine to prevent the console from closing.
+    WriteLine("All done! Good Job!");//yk
+    ReadLine();
